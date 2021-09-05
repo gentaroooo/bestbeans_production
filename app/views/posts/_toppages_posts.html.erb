@@ -1,0 +1,38 @@
+<div class="row">
+	<% posts.each do |post| %>
+		<aside class="col-sm-4">
+			<div class="card">
+				<div class="card-header">
+					<!--ユーザー名と画像を表示-->
+					<div class="media">
+					<% if post.user.image? %>
+					<%= link_to image_tag("#{post.user.image}", class: "user-icon", size: "50x50", alt: "ユーザ画像"), user_path(post.user) %>
+					<% else %>
+					　 <%= link_to image_tag("human.png", class: "user-icon", size: "50x50", alt: "ユーザ画像"), user_path(post.user) %>
+					<% end %>
+
+					<h6><%= post.user.name %></h6>
+					</div>
+				</div>
+				<div class="card-body">
+				<!--投稿画像の表示-->
+					<p>
+					<%if post.image? %>
+					<%= link_to image_tag("#{post.image.url}", class: "post-icon", size: "180x120", alt: "投稿画像"), post_path(post) %>
+					<% else %>
+					<%= link_to image_tag("defo.jpg", class: "post-icon", size: "100x75", alt: "投稿画像"), post_path(post) %>
+					<% end %>
+					</p>
+					<!--投稿内容の表示-->
+					<h6><%= safe_join(post.content.truncate(10).split("\n"),tag(:br)) %></h6>
+				</div>
+				<!--投稿時間  -->
+				<div class="card-footer">
+					<div class="post-time">
+					<%= time_ago_in_words(post.created_at) %>前
+				</div>
+			</div>
+		</aside>
+	<% end %>
+</div>
+
