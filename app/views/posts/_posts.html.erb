@@ -32,7 +32,9 @@
 					<div class="post-time">
 					<%= time_ago_in_words(post.created_at) %>  ago
 					<!-- いいね登録ボタン -->
+					<div id="like_post<%= post.id %>">
 					<%= render 'favorites/favorite_button', post: post %>
+					</div>
 				</div>
 				<!-- 編集ボタン -->
 				<% if current_user == post.user %>

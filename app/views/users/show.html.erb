@@ -22,8 +22,10 @@
                             <% end %>
                         </div>
                     </h1>
+                    <div id="follow_user<%= @user.id %>">
                     <!--フォローボタン-->
                     <%= render 'relationships/follow_button', user: @user %>
+                    </div>
                 </div>
             </div>
             
