@@ -1,24 +1,35 @@
-# README
+# Bestbeans
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[https://www.bestbeans.net/](https://www.bestbeans.net/)
 
-Things you may want to cover:
+## サービス概要
+**美味しいコーヒーを紹介しよう**
 
-* Ruby version
+コーヒー好きの人達が美味しいコーヒーを探せる
+コーヒーに特化した写真投稿サービスです。
 
-* System dependencies
+## 作成した経緯
+私自身がコーヒー好きです。
+また、旅行口コミサイトのトリップアドバイザーによる調査によると<br>
+日本では１人あたりに年間３４０杯、１日約０．９杯を消費している<br>
+大人気のドリンクでですが、コーヒーにフィーチャーしたアプリは<br>
+少なく作成することにしました。<br>
 
-* Configuration
+## 使用技術
+**バッグエンド**
+- Ruby 2.5.3
+- Rails 5.2.6
 
-* Database creation
+**インフラ**
+- AWS
+- ec2
+- S3
+- RDS
+- Nginx　
 
-* Database initialization
+## データベース図
+![データベース図](データベース図.png)
 
-* How to run the test suite
+## サイトマップ
+![サイトマップ](サイトマップ.png)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
