@@ -76,7 +76,7 @@ header.masthead .masthead-heading {
    display: flex;
    color: #808080;
 
-   
+
  }
 
 .media {
@@ -86,7 +86,7 @@ header.masthead .masthead-heading {
 
 .post-icon{
      object-fit: contain;
-     
+
 }
 
 .btn-primary {
@@ -157,3 +157,15 @@ header.masthead .masthead-heading {
     color: #6f7375;
 
 }
+
+ .comment-user {
+    font-size: 70%;
+    color: #333333;
+    object-fit: contain;
+}
+
+.like_comment{
+display: flex;
+list-style: none;
+}
+

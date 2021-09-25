@@ -9,6 +9,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @posts = @user.posts.order(id: :desc).page(params[:page]).per(8)
     counts(@user)
+
+    @posts.each do |post|
+    @comment= post.comments.build
+    @comment.user = current_user
+end
+
   end
 
   def new
@@ -32,19 +38,19 @@ class UsersController < ApplicationController
     @followings = @user.followings.page(params[:page]).per(8)
     counts(@user)
   end
-  
+
   def followers
     @user = User.find(params[:id])
     @followers = @user.followers.page(params[:page]).per(8)
     counts(@user)
   end
-  
+
   def likes
     @user = User.find(params[:id])
     @likes = @user.likes.page(params[:page]).per(6)
     counts(@user)
   end
-  
+
   def edit
     @user = User.find(params[:id])
   end
@@ -59,7 +65,7 @@ class UsersController < ApplicationController
       render :edit
     end
   end
-  
+
   def destroy
     @user = User.find_by(id: params[:id])
     @user.destroy
@@ -74,3 +80,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :image)
   end
 end
+

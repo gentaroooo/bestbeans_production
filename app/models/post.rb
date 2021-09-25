@@ -10,4 +10,7 @@ class Post < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :users, through: :favorites, source: :user
 
+  #コメント機能
+  has_many :comments, dependent: :destroy
+
 end
