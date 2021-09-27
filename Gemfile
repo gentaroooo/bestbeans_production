@@ -80,3 +80,7 @@ group :production, :staging do
 end
 
 gem 'fog-aws'
+
+group :test do
+  gem 'rspec_junit_formatter'  # 追加
+end
