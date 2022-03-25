@@ -18,8 +18,8 @@ default: &default
   # socket: /tmp/mysql.sock
   # socket: /var/lib/mysql/mysql.sock
 # 以下２行を編集
-  # password: pass
-  # host: db
+  password: pass
+  host: db
 
 
 development:
