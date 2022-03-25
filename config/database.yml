@@ -63,7 +63,7 @@ test:
 #最下部の本番環境の記述のみ変更します
 production:
   <<: *default
-  database: アプリ名
+  database: coffeeposts_production
   username: root
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
